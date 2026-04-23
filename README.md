@@ -3,6 +3,10 @@
 一个专为 Jellyfin 媒体服务器打造的浏览器扩展，在 Web 客户端播放视频时自动捕获原文字幕，调用 AI 实时翻译，并以双语形式叠加显示在视频画面上。
 
 ---
+## AI token消耗量很小
+陆海之战至少4集英文字幕，翻译成中文，token消耗如下，花费￥0.87元。
+<img width="280" height="94" alt="image" src="https://github.com/user-attachments/assets/fa667ac1-7b8e-470e-a1c0-13be6f6d0a0c" />
+<img width="339" height="64" alt="image" src="https://github.com/user-attachments/assets/b38849e0-fb9d-4c8d-be42-550ff923cd5a" />
 
 ## 功能特点
 
