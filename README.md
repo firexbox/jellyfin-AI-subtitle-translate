@@ -1,4 +1,5 @@
 # Jellyfin 双语字幕 AI 翻译器 (Edge/Chrome 扩展)
+A browser extension built specifically for the Jellyfin media server that automatically captures the original subtitles while playing videos in the web client, uses AI to translate them in real time, and overlays bilingual subtitles on the video.
 
 一个专为 Jellyfin 媒体服务器打造的浏览器扩展，在 Web 客户端播放视频时自动捕获原文字幕，调用 AI 实时翻译，并以双语形式叠加显示在视频画面上。
 
