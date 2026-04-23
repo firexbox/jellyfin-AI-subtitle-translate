@@ -1,0 +1,77 @@
+{
+  "extName": {
+    "message": "Jellyfin Dual Subtitle AI Translator"
+  },
+  "extDesc": {
+    "message": "Provides AI dual subtitle translation for Jellyfin media server video playback"
+  },
+  "popupTitle": {
+    "message": "Jellyfin Dual Subtitle"
+  },
+  "statusEnabled": {
+    "message": "Dual subtitle enabled"
+  },
+  "statusDisabled": {
+    "message": "Dual subtitle disabled"
+  },
+  "noVideo": {
+    "message": "No video detected"
+  },
+  "btnEnable": {
+    "message": "Enable Dual Subtitle"
+  },
+  "btnDisable": {
+    "message": "Disable Dual Subtitle"
+  },
+  "btnSettings": {
+    "message": "Open Settings"
+  },
+  "translating": {
+    "message": "Translating..."
+  },
+  "translated": {
+    "message": "Translated"
+  },
+  "settingsTitle": {
+    "message": "Jellyfin Dual Subtitle Settings"
+  },
+  "aiProvider": {
+    "message": "AI Provider"
+  },
+  "apiKey": {
+    "message": "API Key"
+  },
+  "apiUrl": {
+    "message": "API Base URL (optional)"
+  },
+  "targetLang": {
+    "message": "Target Language"
+  },
+  "subtitlePosition": {
+    "message": "Translated Position"
+  },
+  "positionTop": {
+    "message": "Top (Original Bottom)"
+  },
+  "positionBottom": {
+    "message": "Bottom (Original Top)"
+  },
+  "fontSize": {
+    "message": "Font Size"
+  },
+  "saveBtn": {
+    "message": "Save Settings"
+  },
+  "testConnection": {
+    "message": "Test Connection"
+  },
+  "connectionSuccess": {
+    "message": "Connection successful!"
+  },
+  "connectionFailed": {
+    "message": "Connection failed"
+  },
+  "model": {
+    "message": "Model"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "extName": {
+    "message": "Jellyfin 双语字幕 AI 翻译"
+  },
+  "extDesc": {
+    "message": "为 Jellyfin 媒体服务器视频播放提供 AI 双语字幕翻译"
+  },
+  "popupTitle": {
+    "message": "Jellyfin 双语字幕"
+  },
+  "statusEnabled": {
+    "message": "已启用双语字幕"
+  },
+  "statusDisabled": {
+    "message": "双语字幕已关闭"
+  },
+  "noVideo": {
+    "message": "未检测到视频播放"
+  },
+  "btnEnable": {
+    "message": "开启双语字幕"
+  },
+  "btnDisable": {
+    "message": "关闭双语字幕"
+  },
+  "btnSettings": {
+    "message": "打开设置"
+  },
+  "translating": {
+    "message": "正在翻译..."
+  },
+  "translated": {
+    "message": "已翻译"
+  },
+  "settingsTitle": {
+    "message": "Jellyfin 双语字幕设置"
+  },
+  "aiProvider": {
+    "message": "AI 供应商"
+  },
+  "apiKey": {
+    "message": "API Key"
+  },
+  "apiUrl": {
+    "message": "API 基础 URL (可选)"
+  },
+  "targetLang": {
+    "message": "目标语言"
+  },
+  "subtitlePosition": {
+    "message": "翻译字幕位置"
+  },
+  "positionTop": {
+    "message": "顶部 (原文底部)"
+  },
+  "positionBottom": {
+    "message": "底部 (原文顶部)"
+  },
+  "fontSize": {
+    "message": "字体大小"
+  },
+  "saveBtn": {
+    "message": "保存设置"
+  },
+  "testConnection": {
+    "message": "测试连接"
+  },
+  "connectionSuccess": {
+    "message": "连接成功!"
+  },
+  "connectionFailed": {
+    "message": "连接失败"
+  },
+  "model": {
+    "message": "模型"
+  }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 320px;
+      font-family: "PingFang SC", "Microsoft YaHei", -apple-system, sans-serif;
+      background: #1a1a2e;
+      color: #eee;
+    }
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 16px;
+      text-align: center;
+    }
+    .header h1 { font-size: 16px; font-weight: 600; }
+    .header p { font-size: 11px; opacity: 0.8; margin-top: 2px; }
+    .content { padding: 16px; }
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    .status-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #666;
+      flex-shrink: 0;
+    }
+    .status-dot.active { background: #4ade80; box-shadow: 0 0 8px #4ade80; }
+    .status-dot.inactive { background: #ef4444; }
+    .status-text { font-size: 13px; }
+    .btn {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-bottom: 8px;
+      font-family: inherit;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-secondary {
+      background: rgba(255,255,255,0.1);
+      color: #ccc;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.15); }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat-value {
+      font-size: 18px;
+      font-weight: 600;
+      color: #667eea;
+    }
+    .stat-label {
+      font-size: 10px;
+      color: #888;
+      margin-top: 2px;
+    }
+    .error-msg {
+      color: #ef4444;
+      font-size: 12px;
+      padding: 8px;
+      background: rgba(239,68,68,0.1);
+      border-radius: 6px;
+      margin-bottom: 8px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1 id="popupTitle">Jellyfin 双语字幕</h1>
+    <p>AI 智能翻译</p>
+  </div>
+  <div class="content">
+    <div class="error-msg" id="errorMsg"></div>
+    <div class="status">
+      <div class="status-dot" id="statusDot"></div>
+      <span class="status-text" id="statusText">检测中...</span>
+    </div>
+    <button class="btn btn-primary" id="toggleBtn">开启双语字幕</button>
+    <div style="margin-bottom: 8px;">
+      <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #ccc; cursor: pointer;">
+        <input type="checkbox" id="hideOriginalCb" style="cursor: pointer;">
+        <span>隐藏原文字幕</span>
+      </label>
+    </div>
+    <div style="margin-bottom: 8px;">
+      <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #ccc; cursor: pointer;">
+        <input type="checkbox" id="translateAllCb" style="cursor: pointer;">
+        <span>翻译全集字幕（包括已播放部分）</span>
+      </label>
+    </div>
+    <button class="btn btn-secondary" id="saveSrtBtn">保存双语字幕为 SRT</button>
+    <button class="btn btn-secondary" id="settingsBtn">打开设置</button>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-value" id="statTranslated">0</div>
+        <div class="stat-label">翻译行数</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" id="statCached">0</div>
+        <div class="stat-label">缓存命中</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" id="statErrors">0</div>
+        <div class="stat-label">错误</div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

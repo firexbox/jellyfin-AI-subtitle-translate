@@ -1,0 +1,98 @@
+/* Dual Subtitle Extension Styles */
+
+#jds-dual-subtitle-host {
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "WenQuanYi Micro Hei", "Hiragino Sans GB", sans-serif !important;
+}
+
+#jds-translated-text {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Fullscreen support - ensure top z-index in all contexts */
+:-webkit-full-screen #jds-dual-subtitle-host,
+:fullscreen #jds-dual-subtitle-host,
+:-webkit-full-screen-ancestor #jds-dual-subtitle-host,
+video::-webkit-media-text-track-container ~ #jds-dual-subtitle-host {
+  z-index: 2147483647 !important;
+  position: fixed !important;
+}
+
+/* Ensure visibility in various contexts */
+#jds-dual-subtitle-host {
+  will-change: opacity, transform !important;
+  backface-visibility: hidden !important;
+}
+
+/* ============================================
+   Hide Original Subtitle - Native Tracks
+   ============================================ */
+.jds-hide-original ::cue {
+  opacity: 0 !important;
+}
+
+.jds-hide-original video::cue {
+  opacity: 0 !important;
+}
+
+/* ============================================
+   Hide Original Subtitle - Jellyfin DOM
+   ============================================ */
+
+/* Main Jellyfin subtitle containers */
+.jds-hide-original .subtitleContainer,
+.jds-hide-original .videoSubtitles,
+.jds-hide-original .subtitle-text,
+.jds-hide-original .videoPlayerContainer .subtitle,
+.jds-hide-original [class*="subtitleContainer"],
+.jds-hide-original [class*="videoSubtitles"] {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  display: none !important;
+}
+
+/* Video.js */
+.jds-hide-original .vjs-text-track-display,
+.jds-hide-original .vjs-text-track-cue {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Shaka Player */
+.jds-hide-original .shaka-text-container,
+.jds-hide-original .shaka-text-container span {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Bitmovin */
+.jds-hide-original .bmpui-ui-subtitle-overlay,
+.jds-hide-original .bmpui-ui-subtitle-overlay .bmpui-ui-label {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Generic subtitle classes inside video player */
+.jds-hide-original .videoPlayerContainer [class*="subtitle"],
+.jds-hide-original .videoPlayerContainer [class*="caption"],
+.jds-hide-original .videoPlayerContainer [class*="Subtitle"],
+.jds-hide-original .videoPlayerContainer [class*="Caption"] {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* WebVTT / native track display inside Jellyfin */
+.jds-hide-original .videoPlayerContainer .vtt,
+.jds-hide-original .videoPlayerContainer .textTrack {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Jellyfin 10.8+ specific subtitle elements */
+.jds-hide-original .subtitleBubble,
+.jds-hide-original .subtitle-overlay,
+.jds-hide-original .subtitle-wrapper {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  display: none !important;
+}
